@@ -1,24 +1,43 @@
 <template>
-  <div class="title">
-    <b-navbar toggleable="lg" type="dark" variant="info">
-      <b-navbar-brand class="ml-2">
-        <b>{{ appName }}</b>
-      </b-navbar-brand>
-    </b-navbar>
-  </div>
-
+  <main class="content p-5 bg-light">
+    <div class="title bg-info p-2 rounded-top">Melhor Frete
+    </div>
+    <div class="content bg-white p-2 pt-4 px-2">
+      <div>
+        <main>
+          <div>
+            <h3>Insira o destino e o peso</h3>
+          </div>
+          <div class="d-flex">
+            <div class="w-25">
+              <form class="form">
+                <div class="form-group">
+                  <label for="destino">Destino</label>
+                  <input class="form-control" type="text" name="destino">
+                </div>
+                <div class="form-group">
+                  <label for="peso">Peso</label>
+                  <input class="form-control" type="text" name="peso">
+                </div>
+                <button class="mt-4 btn-info border-0 rounded" type="submit">Analisar</button>
+              </form>
+            </div>
+            <div class="w-75">
+              <h5 class="text-center">Nenhum dado selecionado.</h5>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+  </main>
+ 
 </template>
 
 <script>
-import {
-  BNavbar,
-  BNavbarBrand,
-} from 'bootstrap-vue'
 
 export default {
   components: {
-    BNavbar,
-    BNavbarBrand,
+    
   },
   data() {
     const appName = ''
@@ -49,4 +68,9 @@ export default {
 .title .navbar-brand {
   margin-left: 20px;
 }
+
+body > div > div > div > div {
+  background: #000;
+}
+
 </style>
